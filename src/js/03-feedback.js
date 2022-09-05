@@ -11,7 +11,7 @@ const formData = JSON.parse(localStorage.getItem(FEEDBACK_KEY)) || {};
 showSavedText();
 
 refs.form.addEventListener('input', throttle(saveValue, 500));
-й;
+
 refs.form.addEventListener('submit', onFormSubmit);
 
 function saveValue(e) {
