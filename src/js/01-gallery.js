@@ -23,13 +23,8 @@ const markup = galleryItems
 
 galleryList.innerHTML = markup;
 
-galleryList.addEventListener('click', e => {
-  return e.preventDefault();
-});
-
-var lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionsType: 'alt',
   captionDelay: 250,
-  captionPosiotion: 'bottom',
 });

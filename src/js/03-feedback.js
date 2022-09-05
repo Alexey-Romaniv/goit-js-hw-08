@@ -23,9 +23,11 @@ function saveValue(e) {
 
 function onFormSubmit(e) {
   e.preventDefault();
-  e.currentTarget.reset();
-  console.log(JSON.parse(localStorage.getItem(FEEDBACK_KEY)));
-  localStorage.removeItem(FEEDBACK_KEY);
+  if (refs.email.value && refs.message.value) {
+    e.currentTarget.reset();
+    console.log(JSON.parse(localStorage.getItem(FEEDBACK_KEY)));
+    localStorage.removeItem(FEEDBACK_KEY);
+  }
 }
 
 function showSavedText() {
